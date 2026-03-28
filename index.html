@@ -385,6 +385,29 @@
       line-height: 1;
     }
 
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .countdown-value {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--durazno);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .countdown-label {
+      font-size: 0.85rem;
+      color: var(--texto-secundario);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+    }
+
     .dogs-message {
       margin-top: 20px;
       font-size: 1rem;
@@ -681,13 +704,13 @@
             <div class="detail-icon">📅 🕕</div>
             <div class="detail-label">Fecha & Hora</div>
             <div class="detail-value">Sábado 4 de Julio</div>
-            <div class="detail-desc">6:00 PM - Puntual, por favor</div>
+            <div class="detail-desc">6:00 PM - Ceremonia Cristiana</div>
           </div>
 
           <div class="detail-card">
             <div class="detail-icon">📍</div>
             <div class="detail-label">Lugar</div>
-            <div class="detail-value">La Marsellesa</div>
+            <div class="detail-value">Barranquilla - La Marsellesa</div>
             <div class="detail-desc">Cra. 52 #74-90</div>
             <a href="https://maps.google.com/?q=La+Marsellesa+Cra+52+74-90" target="_blank" class="detail-link">Ver Mapa</a>
           </div>
@@ -744,9 +767,22 @@
         <div class="dogs-story">
           <div class="dogs-story-title">Nosotros también dijimos sí</div>
           <div class="dates-display">
-            <span class="date-item">04</span>
-            <span class="date-item">07</span>
-            <span class="date-item">26</span>
+            <div class="countdown-item">
+              <span class="countdown-value" id="days">0</span>
+              <span class="countdown-label">Días</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="hours">0</span>
+              <span class="countdown-label">Horas</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="minutes">0</span>
+              <span class="countdown-label">Minutos</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-value" id="seconds">0</span>
+              <span class="countdown-label">Segundos</span>
+            </div>
           </div>
           <p class="dogs-message">
             Kiba y Natsu han aprobado tu asistencia a la boda de sus papás humanos:<br/>
@@ -778,37 +814,46 @@
     // ========== CONTADOR DE DÍAS ==========
     function initializeCounter() {
       const weddingDate = new Date(2026, 6, 4, 18, 0, 0); // 4 de Julio 2026, 6:00 PM
-      const today = new Date();
 
-      function updateCounter() {
-        const now = new Date();
-        const difference = weddingDate - now;
+      function updateCountdown() {
+        // Obtener hora actual en Colombia (UTC-5)
+        const utcNow = new Date();
+        const colombiaTime = new Date(utcNow.getTime() + utcNow.getTimezoneOffset() * 60 * 1000 - 5 * 60 * 60 * 1000);
+        
+        const difference = weddingDate - colombiaTime;
 
         if (difference > 0) {
+          // Calcular días
           const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          );
+          
+          // Calcular horas restantes
+          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          
+          // Calcular minutos restantes
+          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+          
+          // Calcular segundos restantes
+          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-          document.getElementById("dayCounter").textContent = days;
-          document.getElementById("counterDesc").textContent =
-            days > 1
-              ? `${days} días y ${hours} horas para confirmar`
-              : days === 1
-                ? `${days} día y ${hours} horas para confirmar`
-                : `¡La boda es hoy!`;
+          document.getElementById("days").textContent = days >= 0 ? days : 0;
+          document.getElementById("hours").textContent = hours >= 0 ? hours : 0;
+          document.getElementById("minutes").textContent = minutes >= 0 ? minutes : 0;
+          document.getElementById("seconds").textContent = seconds >= 0 ? seconds : 0;
         } else {
-          document.getElementById("dayCounter").textContent = "0";
-          document.getElementById("counterDesc").textContent =
-            "¡La boda está aquí!";
+          document.getElementById("days").textContent = "0";
+          document.getElementById("hours").textContent = "0";
+          document.getElementById("minutes").textContent = "0";
+          document.getElementById("seconds").textContent = "0";
         }
       }
 
-      updateCounter();
-      setInterval(updateCounter, 60000); // Actualizar cada minuto
+      updateCountdown();
+      setInterval(updateCountdown, 1000); // Actualizar cada segundo
     }
 
     // ========== MANEJO DEL FORMULARIO RSVP ==========
+    // Desactivado: Se activará cuando exista el formulario RSVP en el HTML
+    /*
     document.getElementById("rsvpForm").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -836,6 +881,7 @@ ${message ? `- Mensaje: "${message}"` : ""}
       // Limpiar formulario
       this.reset();
     });
+    */
 
     // ========== INICIALIZACIÓN ==========
     document.addEventListener("DOMContentLoaded", function () {
