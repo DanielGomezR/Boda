@@ -221,7 +221,7 @@
 
     .details-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       max-width: 1000px;
       margin: 0 auto;
@@ -561,6 +561,7 @@
 
       .details-grid {
         gap: 20px;
+        grid-template-columns: 1fr;
       }
 
       .detail-card {
@@ -677,17 +678,10 @@
         <h2 class="section-title">Detalles del Evento</h2>
         <div class="details-grid">
           <div class="detail-card">
-            <div class="detail-icon">📅</div>
-            <div class="detail-label">Fecha</div>
+            <div class="detail-icon">📅 🕕</div>
+            <div class="detail-label">Fecha & Hora</div>
             <div class="detail-value">Sábado 4 de Julio</div>
-            <div class="detail-desc">2026</div>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-icon">🕕</div>
-            <div class="detail-label">Hora</div>
-            <div class="detail-value">6:00 PM</div>
-            <div class="detail-desc">Puntual, por favor</div>
+            <div class="detail-desc">6:00 PM - Puntual, por favor</div>
           </div>
 
           <div class="detail-card">
@@ -696,6 +690,26 @@
             <div class="detail-value">La Marsellesa</div>
             <div class="detail-desc">Cra. 52 #74-90</div>
             <a href="https://maps.google.com/?q=La+Marsellesa+Cra+52+74-90" target="_blank" class="detail-link">Ver Mapa</a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">👔</div>
+            <div class="detail-label">Código de Vestimenta</div>
+            <div class="detail-value">Formal</div>
+            <div class="detail-desc">
+              <strong>Hombres:</strong> Traje y Corbata<br/>
+              <strong>Mujeres:</strong> Vestido Largo Unicolor<br/>
+              <strong>Colores Reservados:</strong> Blanco, Beige, Rosado, Rojo, Vino tinto
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon">🎁</div>
+            <div class="detail-label">Lluvia de Sobres</div>
+            <div class="detail-value">Tu Regalo</div>
+            <div class="detail-desc">
+              El día de nuestra boda podrás llevar un sobre con tu regalo, pero también tendremos un código QR en el lugar donde podrás enviar tu regalo de forma virtual para mayor comodidad.
+            </div>
           </div>
         </div>
       </section>
@@ -746,8 +760,8 @@
       <!-- FOOTER -->
       <section class="section-footer">
         <p class="footer-text">
-          Queremos celebrar este momento especial contigo. <br />
-          Tu presencia es el mejor regalo que podemos recibir.
+          Hemos reservado un lugar especial para ti.<br/>
+          Sin duda alguna, nuestro mejor regalo será tu presencia en este día tan Especial. <br/>
         </p>
         <div class="footer-names">Daniel & Judith 💕</div>
       </section>
