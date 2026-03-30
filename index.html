@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lora:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
     rel="stylesheet"
   />
   
@@ -22,8 +22,8 @@
       --fondo: #faf5f2;
       --borde: rgba(109, 35, 59, 0.1);
       --sombra: 0 18px 45px rgba(109, 35, 59, 0.12);
-      --font-heading: "Playfair Display", serif;
-      --font-body: "Lora", serif;
+      --font-heading: "Poppins", sans-serif;
+      --font-body: "Poppins", sans-serif;
     }
 
     * {
@@ -71,12 +71,15 @@
     /* ========== SECCIÓN HÉROE ========== */
     .section-hero {
       min-height: 100vh;
-      background: linear-gradient(
+      /* background: linear-gradient(
           135deg,
           rgba(212, 138, 143, 0.15) 0%,
           rgba(255, 255, 255, 0.8) 100%
         ),
         url("daniel-judith.jpg")
+          center/cover no-repeat; */
+      background: 
+        url("daniel-judith2.jpg")
           center/cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -105,8 +108,9 @@
       font-size: 1.1rem;
       color: var(--texto-secundario);
       letter-spacing: 0.08em;
-      margin-bottom: 30px;
+      /* margin-bottom: 30px; */
       font-weight: 400;
+      line-height: 1.1;
     }
 
     .hero__names {
@@ -128,11 +132,18 @@
       letter-spacing: 0.05em;
     }
 
+    .hero__names-svg {
+      /* max-width: 600px; */
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
     .hero__divider {
-      width: 80px;
+      /* width: 80px;
       height: 3px;
       background: linear-gradient(90deg, transparent, var(--palo-rosa), transparent);
-      margin: 30px auto;
+      margin: 30px auto; */
     }
 
     .hero__subtitle {
@@ -181,25 +192,27 @@
     .verse-box {
       max-width: 700px;
       margin: 0 auto;
-      padding: 50px 40px;
-      background: rgba(255, 255, 255, 0.9);
-      border: 2px solid var(--palo-rosa);
+      /* padding: 50px 40px; */
+      /* background: rgba(255, 255, 255, 0.9); */
+      /* border: 2px solid var(--palo-rosa); */
       border-radius: 24px;
-      box-shadow: 0 12px 30px rgba(196, 138, 143, 0.1);
+      /* box-shadow: 0 12px 30px rgba(196, 138, 143, 0.1); */
     }
 
     .verse-text {
       font-size: 1.3rem;
-      color: var(--vino);
+      color: var(--texto-secundario);
       font-style: italic;
-      margin-bottom: 20px;
-      line-height: 1.9;
+      /* margin-bottom: 20px; */
+      line-height: 1.1;
       font-weight: 600;
+      
     }
 
     .verse-reference {
       font-size: 1rem;
-      color: var(--palo-rosa);
+      line-height: 1.1;
+      color: var(--texto-secundario);
       font-weight: 700;
       letter-spacing: 0.08em;
     }
@@ -245,6 +258,16 @@
     .detail-icon {
       font-size: 2.5rem;
       margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+    }
+
+    .detail-icon img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
     }
 
     .detail-label {
@@ -261,13 +284,13 @@
       color: var(--vino);
       font-family: var(--font-heading);
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 0px;
     }
 
     .detail-desc {
       font-size: 1rem;
       color: var(--texto-secundario);
-      line-height: 1.7;
+      line-height: 1.4;
     }
 
     .detail-link {
@@ -289,12 +312,8 @@
 
     /* ========== SECCIÓN PERROS ========== */
     .section-dogs {
-      padding: 80px 40px;
-      background: linear-gradient(
-        180deg,
-        rgba(246, 202, 179, 0.15) 0%,
-        rgba(255, 255, 255, 0.8) 100%
-      );
+      padding: 40px 40px 0px 40px;
+      background: var(--fondo);
       text-align: center;
     }
 
@@ -302,7 +321,7 @@
       font-size: 1.3rem;
       color: var(--vino);
       font-weight: 700;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       font-family: var(--font-heading);
     }
 
@@ -317,12 +336,16 @@
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 40px;
       max-width: 900px;
-      margin: 50px auto;
+      margin: 0px auto;
     }
 
     .dog-card {
       position: relative;
       justify-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .dog-image {
@@ -331,7 +354,7 @@
       height: 280px;
       object-fit: cover;
       border-radius: 20px;
-      box-shadow: 0 12px 32px rgba(109, 35, 59, 0.15);
+      /* box-shadow: 0 12px 32px rgba(109, 35, 59, 0.15); */
       transition: transform 0.3s ease;
     }
 
@@ -348,10 +371,11 @@
     }
 
     .dog-breed {
-      font-size: 0.95rem;
+      /* font-size: 0.95rem;
       color: var(--palo-rosa);
       font-weight: 600;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.08em; */
+      margin-bottom: 25px;
     }
 
     .dogs-story {
@@ -395,7 +419,7 @@
     .countdown-value {
       font-family: var(--font-heading);
       font-size: 2.5rem;
-      color: var(--durazno);
+      color: var(--texto-secundario);
       font-weight: 800;
       line-height: 1;
     }
@@ -668,104 +692,17 @@
       <!-- SECCIÓN HÉROE -->
       <section class="section-hero" id="home">
         <div class="hero-content">
-          <p class="hero__intro">Aquí comienza un para siempre</p>
-          <p class="hero__intro">escrito con amor y propósito por parte de Dios</p>
+          <p class="hero__intro">Aquí comienza un <b>para siempre </b> escrito con amor y propósito por parte de Dios</p>
+          <!-- <p class="hero__intro"></p> -->
           <div class="hero__divider"></div>
-          <h1 class="hero__names">
-            Daniel
-            <span class="hero__names-accent">Gómez</span>
-            &
-            Judith
-            <span class="hero__names-accent">Díaz</span>
-          </h1>
+          <img src="daniel-judith.svg" alt="Daniel & Judith" class="hero__names-svg" />
           <div class="hero__divider"></div>
-          <p class="hero__subtitle">
-            Estás invitado a celebrar con nosotros la alegría de unir nuestras vidas y caminar juntos en esta nueva etapa.
-          </p>
-          <button class="hero__cta" onclick="window.open('https://wa.me/573004077709', '_blank')">Confirma Tu Asistencia</button>
-        </div>
-      </section>
-
-      <!-- SECCIÓN VERSÍCULO -->
-      <section class="section-verse" id="verse">
-        <div class="verse-box">
+           <div class="verse-box">
           <p class="verse-text">
             "Más vale dos que uno, porque el resultado puede ser mucho mejor. Si uno cae, el otro lo levanta."
           </p>
-          <p class="verse-reference">Eclesiastés 4:9-10a</p>
+          <p class="verse-text">Eclesiastés 4:9-10a</p>
         </div>
-      </section>
-
-      <!-- SECCIÓN DETALLES -->
-      <section class="section-details" id="details">
-        <h2 class="section-title">Detalles del Evento</h2>
-        <div class="details-grid">
-          <div class="detail-card">
-            <div class="detail-icon">📅 🕕</div>
-            <div class="detail-label">Fecha & Hora</div>
-            <div class="detail-value">Sábado 4 de Julio</div>
-            <div class="detail-desc">6:00 PM - Ceremonia Cristiana</div>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-icon">📍</div>
-            <div class="detail-label">Lugar</div>
-            <div class="detail-value">Barranquilla - La Marsellesa</div>
-            <div class="detail-desc">Cra. 52 #74-90</div>
-            <a href="https://maps.google.com/?q=La+Marsellesa+Cra+52+74-90" target="_blank" class="detail-link">Ver Mapa</a>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-icon">👔</div>
-            <div class="detail-label">Código de Vestimenta</div>
-            <div class="detail-value">Formal</div>
-            <div class="detail-desc">
-              <strong>Hombres:</strong> Traje y Corbata<br/>
-              <strong>Mujeres:</strong> Vestido Largo Unicolor<br/>
-              <strong>Colores Reservados:</strong> Blanco, Beige, Rosado, Rojo, Vino tinto
-            </div>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-icon">🎁</div>
-            <div class="detail-label">Lluvia de Sobres</div>
-            <div class="detail-value">Tu Regalo</div>
-            <div class="detail-desc">
-              El día de nuestra boda podrás llevar un sobre con tu regalo, pero también tendremos un código QR en el lugar donde podrás enviar tu regalo de forma virtual para mayor comodidad.
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECCIÓN PERROS -->
-      <section class="section-dogs" id="dogs">
-        <div class="dogs-intro">¡Testigos de esta historia de amor!</div>
-        <div class="dogs-emoji">🐾</div>
-
-        <div class="dogs-grid">
-          <div class="dog-card">
-            <img
-              src="kiba_natsu.jpeg"
-              alt="Kiba - Natsu"
-              class="dog-image"
-            />
-            <div class="dog-name">Kiba    -     Natsu</div>
-            <div class="dog-breed">Gómez Diaz</div>
-          </div>
-
-          <!-- <div class="dog-card">
-            <img
-              src="https://images.unsplash.com/photo-1505628346881-b72b27e84530?auto=format&fit=crop&w=400&q=80"
-              alt="Natsu - Beagle"
-              class="dog-image"
-            />
-            <div class="dog-name">Natsu</div>
-            <div class="dog-breed">Gómez</div>
-          </div> -->
-        </div>
-
-        <div class="dogs-story">
-          <div class="dogs-story-title">Nosotros también dijimos sí</div>
           <div class="dates-display">
             <div class="countdown-item">
               <span class="countdown-value" id="days">0</span>
@@ -784,23 +721,98 @@
               <span class="countdown-label">Segundos</span>
             </div>
           </div>
-          <p class="dogs-message">
-            Kiba y Natsu han aprobado tu asistencia a la boda de sus papás humanos:<br/>
-            <strong>Daniel y Judith</strong>
-          </p>
+          <!-- <p class="hero__subtitle">
+            Estás invitado a celebrar con nosotros la alegría de unir nuestras vidas y caminar juntos en esta nueva etapa.
+          </p> -->
+        </div>
+      </section>
+
+        <!-- SECCIÓN PERROS -->
+      <section class="section-dogs" id="dogs">
+        <div class="dogs-intro"> Kiba y Natsu </div>
+        <!-- <div class="dogs-emoji">🐾</div> -->
+      <p class="hero__intro">¡Testigos de esta historia de amor!</p>
+        <div class="dogs-grid">
+          <div class="dog-card">
+            <img
+              src="kiba_natsu.svg"
+              alt="Kiba - Natsu"
+              class="dog-image"
+            />
+            <div class="dog-name"> </div>
+            <!-- <div class="dog-breed"></div> -->
+             <div class="dogs-intro"> Nosotros también dijimos sí.</div>
+            <p class="hero__intro dog-breed">Hemos aprobado tu asistencia a la boda de nuestros papás humanos.</p>
+            <button class="hero__cta" onclick="window.open('https://wa.me/573004077709', '_blank')">Confirma Tu Asistencia</button>
+
+          </div>
         </div>
       </section>
 
      
 
+      <!-- SECCIÓN DETALLES -->
+      <section class="section-details" id="details">
+        <h2 class="section-title">Detalles del Evento</h2>
+        <div class="details-grid">
+          <div class="detail-card">
+            <div class="detail-icon"><img src="fecha.svg" alt="Fecha" /></div>
+            <div class="detail-label">Fecha & Hora</div>
+            <div class="detail-value">Sábado 4 de Julio</div>
+            <div class="detail-desc">6:00 PM - Ceremonia Cristiana</div>
+            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda%20Daniel%20%26%20Judith&dates=20260704T180000/20260704T230000&details=Ceremonia%20Cristiana&location=Sal%C3%B3n%20de%20eventos%20La%20Marsellesa%2C%20Cra.%2052%20%2374-90%2C%20Barranquilla&ctz=America/Bogota" target="_blank" class="detail-link">Añadir al Calendario</a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon"><img src="lugar.svg" alt="Ubicación" /></div>
+            <div class="detail-label">Lugar</div>
+            <div class="detail-value">Salón de eventos La Marsellesa</div>
+            <div class="detail-desc">Cra. 52 #74-90 - Barranquilla</div>
+            <a href="https://maps.google.com/?q=La+Marsellesa+Cra+52+74-90" target="_blank" class="detail-link">Ver Mapa</a>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon"><img src="ropa.svg" alt="Código de Vestimenta" /></div>
+            <div class="detail-label">Código de Vestimenta</div>
+            <div class="detail-value">Formal</div>
+            <div class="detail-desc">
+              <strong>Hombres:</strong> Traje y Corbata<br/>
+              <strong>Mujeres:</strong> Vestido Largo Unicolor<br/>
+              <strong>Colores Reservados:</strong> Blanco, Beige, Rosado, Rojo, Vino tinto
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-icon"><img src="regalo.svg" alt="Lluvia de Sobres" /></div>
+            <div class="detail-label">Lluvia de Sobres</div>
+            <div class="detail-value">Tu Regalo</div>
+            <div class="detail-desc">
+              Para tu comodidad, en la recepción contaremos con un buzón para lluvia de sobres y un código QR para transferencias.
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <!-- SECCIÓN VERSÍCULO -->
+      <!-- <section class="section-verse" id="verse">
+        <div class="verse-box">
+          <p class="verse-text">
+            "Más vale dos que uno, porque el resultado puede ser mucho mejor. Si uno cae, el otro lo levanta."
+          </p>
+          <p class="verse-reference">Eclesiastés 4:9-10a</p>
+        </div>
+      </section> -->
+
+     
+
       <!-- FOOTER -->
-      <section class="section-footer">
+      <!-- <section class="section-footer">
         <p class="footer-text">
           Hemos reservado un lugar especial para ti.<br/>
           Sin duda alguna, nuestro mejor regalo será tu presencia en este día tan Especial. <br/>
         </p>
         <div class="footer-names">Daniel & Judith 💕</div>
-      </section>
+      </section> -->
     </div>
   </main>
 
