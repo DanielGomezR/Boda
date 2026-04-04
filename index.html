@@ -375,6 +375,14 @@
       color: var(--palo-rosa);
       font-weight: 600;
       letter-spacing: 0.08em; */
+      margin-bottom: 5px;
+    }
+
+    .dog-breed-cupos {
+      /* font-size: 0.95rem;
+      color: var(--palo-rosa);
+      font-weight: 600;
+      letter-spacing: 0.08em; */
       margin-bottom: 25px;
     }
 
@@ -743,7 +751,9 @@
             <!-- <div class="dog-breed"></div> -->
              <div class="dogs-intro"> Nosotros también dijimos sí.</div>
             <p class="hero__intro dog-breed">Hemos aprobado tu asistencia a la boda de nuestros papás humanos.</p>
-            <button class="hero__cta" onclick="window.open('https://wa.me/573004077709', '_blank')">Confirma Tu Asistencia</button>
+            <p class="hero__intro dog-breed dog-breed-cupos" id="cupos"></p>
+
+            <button class="hero__cta" onclick="window.open('https://wa.me/573004077709', '_blank')">Confirma tu asistencia</button>
 
           </div>
         </div>
@@ -895,8 +905,38 @@ ${message ? `- Mensaje: "${message}"` : ""}
     });
     */
 
+    // ========== PARÁMETRO SHOW ==========
+    function handleShowParameter() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("show")) {
+        // Ocultar todas las secciones
+        document.querySelectorAll(".section-hero, .section-dogs, .section-verse, .section-rsvp, .section-footer").forEach(section => {
+          section.style.display = "none";
+        });
+        // Asegurar que la sección de detalles sea visible
+        const detailsSection = document.getElementById("details");
+        if (detailsSection) {
+          detailsSection.style.display = "block";
+        }
+      }
+    }
+
+    // ========== PARÁMETRO CUPOS ==========
+    function handleCuposParameter() {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("cupos")) {
+        const cuposValue = params.get("cupos");
+        const cuposElement = document.getElementById("cupos");
+        if (cuposElement) {
+          cuposElement.textContent = `Cupos (${cuposValue})`;
+        }
+      }
+    }
+
     // ========== INICIALIZACIÓN ==========
     document.addEventListener("DOMContentLoaded", function () {
+      handleShowParameter();
+      handleCuposParameter();
       initializeCounter();
     });
   </script>
