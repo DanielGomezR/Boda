@@ -1,944 +1,936 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel & Judith - Invitación de Boda</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
-    rel="stylesheet"
-  />
-  
-  <style>
-    :root {
-      --vino: #6d233b;
-      --palo-rosa: #c48a8f;
-      --durazno: #f6cab3;
-      --blanco: #ffffff;
-      --texto-principal: #2e1d25;
-      --texto-secundario: #5a343e;
-      --fondo: #faf5f2;
-      --borde: rgba(109, 35, 59, 0.1);
-      --sombra: 0 18px 45px rgba(109, 35, 59, 0.12);
-      --font-heading: "Poppins", sans-serif;
-      --font-body: "Poppins", sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daniel & Judith - Invitación de Boda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <style>
+      :root {
+        --vino: #6d233b;
+        --palo-rosa: #c48a8f;
+        --durazno: #f6cab3;
+        --blanco: #ffffff;
+        --texto-principal: #2e1d25;
+        --texto-secundario: #5a343e;
+        --fondo: #faf5f2;
+        --borde: rgba(109, 35, 59, 0.1);
+        --sombra: 0 18px 45px rgba(109, 35, 59, 0.12);
+        --font-heading: "Poppins", sans-serif;
+        --font-body: "Poppins", sans-serif;
+      }
 
-    html {
-      scroll-behavior: smooth;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: var(--font-body);
-      background: linear-gradient(180deg, #fbf4f0 0%, #fffdfa 100%);
-      color: var(--texto-principal);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+      body {
+        font-family: var(--font-body);
+        background: linear-gradient(180deg, #fbf4f0 0%, #fffdfa 100%);
+        color: var(--texto-principal);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
 
-    /* ========== LAYOUT GENERAL ========== */
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    .container {
-      width: 100%;
-      max-width: 1000px;
-      background: var(--blanco);
-      border-radius: 32px;
-      box-shadow: var(--sombra);
-      overflow: hidden;
-    }
+      /* ========== LAYOUT GENERAL ========== */
+      .page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
 
-    /* ========== SECCIÓN HÉROE ========== */
-    .section-hero {
-      min-height: 100vh;
-      /* background: linear-gradient(
+      .container {
+        width: 100%;
+        max-width: 1000px;
+        background: var(--blanco);
+        border-radius: 32px;
+        box-shadow: var(--sombra);
+        overflow: hidden;
+      }
+
+      /* ========== SECCIÓN HÉROE ========== */
+      .section-hero {
+        min-height: 100vh;
+        /* background: linear-gradient(
           135deg,
           rgba(212, 138, 143, 0.15) 0%,
           rgba(255, 255, 255, 0.8) 100%
         ),
         url("daniel-judith.jpg")
           center/cover no-repeat; */
-      background: 
-        url("daniel-judith2.jpg")
-          center/cover no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 40px;
-      position: relative;
-    }
+        background: url("daniel-judith2.jpg") center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 40px;
+        position: relative;
+      }
 
-    .section-hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(255, 255, 255, 0.65);
-      z-index: 1;
-    }
+      .section-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.65);
+        z-index: 1;
+      }
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 800px;
-    }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+      }
 
-    .hero__intro {
-      font-size: 1.1rem;
-      color: var(--texto-secundario);
-      letter-spacing: 0.08em;
-      /* margin-bottom: 30px; */
-      font-weight: 400;
-      line-height: 1.1;
-    }
+      .hero__intro {
+        font-size: 1.1rem;
+        color: var(--texto-secundario);
+        letter-spacing: 0.08em;
+        /* margin-bottom: 30px; */
+        font-weight: 400;
+        line-height: 1.1;
+      }
 
-    .hero__names {
-      font-family: var(--font-heading);
-      font-size: clamp(2.5rem, 7vw, 5rem);
-      line-height: 1.1;
-      color: var(--vino);
-      margin-bottom: 20px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
+      .hero__names {
+        font-family: var(--font-heading);
+        font-size: clamp(2.5rem, 7vw, 5rem);
+        line-height: 1.1;
+        color: var(--vino);
+        margin-bottom: 20px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
 
-    .hero__names-accent {
-      display: block;
-      font-size: 0.6em;
-      color: var(--palo-rosa);
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 0.05em;
-    }
+      .hero__names-accent {
+        display: block;
+        font-size: 0.6em;
+        color: var(--palo-rosa);
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: 0.05em;
+      }
 
-    .hero__names-svg {
-      /* max-width: 600px; */
-      width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
+      .hero__names-svg {
+        /* max-width: 600px; */
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
 
-    .hero__divider {
-      /* width: 80px;
+      .hero__divider {
+        /* width: 80px;
       height: 3px;
       background: linear-gradient(90deg, transparent, var(--palo-rosa), transparent);
       margin: 30px auto; */
-    }
-
-    .hero__subtitle {
-      font-size: 1.05rem;
-      color: var(--texto-secundario);
-      max-width: 600px;
-      margin: 0 auto 40px;
-      line-height: 1.8;
-    }
-
-    .hero__cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 56px;
-      padding: 0 40px;
-      background: var(--vino);
-      color: var(--blanco);
-      border: none;
-      border-radius: 999px;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: transform 0.24s ease, box-shadow 0.24s ease, background-color 0.24s ease;
-      box-shadow: 0 12px 28px rgba(109, 35, 59, 0.15);
-    }
-
-    .hero__cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 36px rgba(109, 35, 59, 0.2);
-      background: #5a1e2e;
-    }
-
-    /* ========== SECCIÓN VERSÍCULO ========== */
-    .section-verse {
-      padding: 80px 40px;
-      background: linear-gradient(
-        180deg,
-        rgba(196, 138, 143, 0.08) 0%,
-        rgba(255, 255, 255, 0.6) 100%
-      );
-      text-align: center;
-    }
-
-    .verse-box {
-      max-width: 700px;
-      margin: 0 auto;
-      /* padding: 50px 40px; */
-      /* background: rgba(255, 255, 255, 0.9); */
-      /* border: 2px solid var(--palo-rosa); */
-      border-radius: 24px;
-      /* box-shadow: 0 12px 30px rgba(196, 138, 143, 0.1); */
-    }
-
-    .verse-text {
-      font-size: 1.3rem;
-      color: var(--texto-secundario);
-      font-style: italic;
-      /* margin-bottom: 20px; */
-      line-height: 1.1;
-      font-weight: 600;
-      
-    }
-
-    .verse-reference {
-      font-size: 1rem;
-      line-height: 1.1;
-      color: var(--texto-secundario);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    /* ========== SECCIÓN DETALLES ========== */
-    .section-details {
-      padding: 80px 40px;
-      background: var(--fondo);
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: var(--font-heading);
-      font-size: clamp(2rem, 5vw, 3rem);
-      color: var(--vino);
-      margin-bottom: 60px;
-      font-weight: 700;
-    }
-
-    .details-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .detail-card {
-      background: var(--blanco);
-      border: 1px solid var(--borde);
-      border-radius: 24px;
-      padding: 40px 30px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(109, 35, 59, 0.08);
-      transition: transform 0.24s ease, box-shadow 0.24s ease;
-    }
-
-    .detail-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 36px rgba(109, 35, 59, 0.12);
-    }
-
-    .detail-icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 80px;
-    }
-
-    .detail-icon img {
-      width: 200px;
-      height: 200px;
-      object-fit: contain;
-    }
-
-    .detail-label {
-      font-size: 0.9rem;
-      color: var(--palo-rosa);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .detail-value {
-      font-size: 1.4rem;
-      color: var(--vino);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      margin-bottom: 0px;
-    }
-
-    .detail-desc {
-      font-size: 1rem;
-      color: var(--texto-secundario);
-      line-height: 1.4;
-    }
-
-    .detail-link {
-      display: inline-block;
-      margin-top: 14px;
-      padding: 10px 20px;
-      background: rgba(109, 35, 59, 0.06);
-      color: var(--vino);
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      transition: background 0.2s ease;
-    }
-
-    .detail-link:hover {
-      background: rgba(109, 35, 59, 0.12);
-    }
-
-    /* ========== SECCIÓN PERROS ========== */
-    .section-dogs {
-      padding: 40px 40px 0px 40px;
-      background: var(--fondo);
-      text-align: center;
-    }
-
-    .dogs-intro {
-      font-size: 1.3rem;
-      color: var(--vino);
-      font-weight: 700;
-      margin-bottom: 7px;
-      font-family: var(--font-heading);
-    }
-
-    .dogs-emoji {
-      display: block;
-      font-size: 2rem;
-      margin: 16px 0;
-    }
-
-    .dogs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 40px;
-      max-width: 900px;
-      margin: 0px auto;
-    }
-
-    .dog-card {
-      position: relative;
-      justify-self: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .dog-image {
-      width: 100%;
-      max-width: 280px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 20px;
-      /* box-shadow: 0 12px 32px rgba(109, 35, 59, 0.15); */
-      transition: transform 0.3s ease;
-    }
-
-    .dog-card:hover .dog-image {
-      transform: scale(1.04);
-    }
-
-    .dog-name {
-      font-family: var(--font-heading);
-      font-size: 1.6rem;
-      color: var(--vino);
-      margin-top: 16px;
-      font-weight: 700;
-    }
-
-    .dog-breed {
-      /* font-size: 0.95rem;
-      color: var(--palo-rosa);
-      font-weight: 600;
-      letter-spacing: 0.08em; */
-      margin-bottom: 5px;
-    }
-
-    .dog-breed-cupos {
-      /* font-size: 0.95rem;
-      color: var(--palo-rosa);
-      font-weight: 600;
-      letter-spacing: 0.08em; */
-      margin-bottom: 25px;
-    }
-
-    .dogs-story {
-      max-width: 700px;
-      margin: 60px auto 0;
-      padding-top: 40px;
-      border-top: 2px solid rgba(196, 138, 143, 0.3);
-    }
-
-    .dogs-story-title {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      color: var(--vino);
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    .dates-display {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin: 30px 0;
-      flex-wrap: wrap;
-    }
-
-    .date-item {
-      font-family: var(--font-heading);
-      font-size: 3rem;
-      color: var(--durazno);
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .countdown-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .countdown-value {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      color: var(--texto-secundario);
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .countdown-label {
-      font-size: 0.85rem;
-      color: var(--texto-secundario);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 600;
-    }
-
-    .dogs-message {
-      margin-top: 20px;
-      font-size: 1rem;
-      color: var(--texto-secundario);
-      line-height: 1.8;
-    }
-
-    /* ========== SECCIÓN RSVP ========== */
-    .section-rsvp {
-      padding: 80px 40px;
-      background: linear-gradient(
-        180deg,
-        rgba(109, 35, 59, 0.05) 0%,
-        rgba(255, 255, 255, 0.6) 100%
-      );
-      text-align: center;
-    }
-
-    .rsvp-content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .rsvp-subtitle {
-      font-size: 1rem;
-      color: var(--palo-rosa);
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      font-weight: 700;
-      margin-bottom: 16px;
-    }
-
-    .rsvp-form {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .form-group {
-      text-align: left;
-    }
-
-    .form-label {
-      display: block;
-      font-size: 0.95rem;
-      color: var(--vino);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .form-input,
-    .form-textarea,
-    .form-select {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1px solid var(--borde);
-      border-radius: 12px;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      color: var(--texto-principal);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .form-input:focus,
-    .form-textarea:focus,
-    .form-select:focus {
-      outline: none;
-      border-color: var(--palo-rosa);
-      box-shadow: 0 0 0 3px rgba(196, 138, 143, 0.1);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-
-    .btn-submit {
-      min-height: 56px;
-      padding: 0 40px;
-      background: var(--durazno);
-      color: var(--vino);
-      border: none;
-      border-radius: 999px;
-      font-family: var(--font-body);
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.24s ease, box-shadow 0.24s ease;
-      box-shadow: 0 8px 20px rgba(246, 202, 179, 0.2);
-      margin-top: 8px;
-    }
-
-    .btn-submit:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 28px rgba(246, 202, 179, 0.3);
-    }
-
-    .rsvp-note {
-      margin-top: 24px;
-      font-size: 0.95rem;
-      color: var(--texto-secundario);
-      font-style: italic;
-    }
-
-    /* ========== FOOTER ========== */
-    .section-footer {
-      padding: 40px;
-      background: var(--vino);
-      color: var(--blanco);
-      text-align: center;
-    }
-
-    .footer-text {
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-    .footer-names {
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-top: 12px;
-    }
-
-    /* ========== COUNTER INTERACTIVO ========== */
-    .counter-section {
-      margin: 20px 0;
-      padding: 20px;
-      background: rgba(196, 138, 143, 0.1);
-      border-radius: 16px;
-    }
-
-    .counter-label {
-      font-size: 0.95rem;
-      color: var(--texto-secundario);
-      margin-bottom: 12px;
-    }
-
-    .counter-display {
-      font-family: var(--font-heading);
-      font-size: 2.5rem;
-      color: var(--durazno);
-      font-weight: 700;
-      margin: 8px 0;
-    }
-
-    .counter-desc {
-      font-size: 0.9rem;
-      color: var(--texto-secundario);
-    }
-
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 768px) {
-      .section-hero {
-        padding: 40px 24px;
-        min-height: auto;
-      }
-
-      .hero__names {
-        font-size: 2.5rem;
-      }
-
-      .section-verse,
-      .section-details,
-      .section-dogs,
-      .section-rsvp {
-        padding: 50px 24px;
-      }
-
-      .verse-box {
-        padding: 30px 24px;
-      }
-
-      .details-grid {
-        gap: 20px;
-        grid-template-columns: 1fr;
-      }
-
-      .detail-card {
-        padding: 30px 20px;
-      }
-
-      .dogs-grid {
-        gap: 24px;
-      }
-
-      .dog-image {
-        max-width: 100%;
-        height: 240px;
-      }
-
-      .section-title {
-        font-size: 2rem;
-        margin-bottom: 40px;
-      }
-
-      .dates-display {
-        gap: 20px;
-      }
-
-      .date-item {
-        font-size: 2.5rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        border-radius: 0;
-      }
-
-      .hero__names {
-        font-size: 1.8rem;
       }
 
       .hero__subtitle {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
+        color: var(--texto-secundario);
+        max-width: 600px;
+        margin: 0 auto 40px;
+        line-height: 1.8;
       }
 
-      .section-verse,
-      .section-details,
-      .section-dogs,
-      .section-rsvp {
-        padding: 40px 16px;
+      .hero__cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        padding: 0 40px;
+        background: var(--vino);
+        color: var(--blanco);
+        border: none;
+        border-radius: 999px;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease,
+          background-color 0.24s ease;
+        box-shadow: 0 12px 28px rgba(109, 35, 59, 0.15);
+      }
+
+      .hero__cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 16px 36px rgba(109, 35, 59, 0.2);
+        background: #5a1e2e;
+      }
+
+      /* ========== SECCIÓN VERSÍCULO ========== */
+      .section-verse {
+        padding: 80px 40px;
+        background: linear-gradient(
+          180deg,
+          rgba(196, 138, 143, 0.08) 0%,
+          rgba(255, 255, 255, 0.6) 100%
+        );
+        text-align: center;
       }
 
       .verse-box {
-        padding: 24px 16px;
-        border-radius: 16px;
+        max-width: 700px;
+        margin: 0 auto;
+        /* padding: 50px 40px; */
+        /* background: rgba(255, 255, 255, 0.9); */
+        /* border: 2px solid var(--palo-rosa); */
+        border-radius: 24px;
+        /* box-shadow: 0 12px 30px rgba(196, 138, 143, 0.1); */
       }
 
       .verse-text {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        color: var(--texto-secundario);
+        font-style: italic;
+        /* margin-bottom: 20px; */
+        line-height: 1.1;
+        font-weight: 600;
       }
 
-      .detail-card {
-        padding: 24px 16px;
+      .verse-reference {
+        font-size: 1rem;
+        line-height: 1.1;
+        color: var(--texto-secundario);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      /* ========== SECCIÓN DETALLES ========== */
+      .section-details {
+        padding: 80px 40px;
+        background: var(--fondo);
       }
 
       .section-title {
-        font-size: 1.5rem;
-        margin-bottom: 30px;
+        text-align: center;
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 5vw, 3rem);
+        color: var(--vino);
+        margin-bottom: 60px;
+        font-weight: 700;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .detail-card {
+        background: var(--blanco);
+        border: 1px solid var(--borde);
+        border-radius: 24px;
+        padding: 40px 30px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(109, 35, 59, 0.08);
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease;
+      }
+
+      .detail-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 36px rgba(109, 35, 59, 0.12);
+      }
+
+      .detail-icon {
+        font-size: 2.5rem;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+      }
+
+      .detail-icon img {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .detail-label {
+        font-size: 0.9rem;
+        color: var(--palo-rosa);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+
+      .detail-value {
+        font-size: 1.4rem;
+        color: var(--vino);
+        font-family: var(--font-heading);
+        font-weight: 700;
+        margin-bottom: 0px;
+      }
+
+      .detail-desc {
+        font-size: 1rem;
+        color: var(--texto-secundario);
+        line-height: 1.4;
+      }
+
+      .detail-link {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 10px 20px;
+        background: rgba(109, 35, 59, 0.06);
+        color: var(--vino);
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: background 0.2s ease;
+      }
+
+      .detail-link:hover {
+        background: rgba(109, 35, 59, 0.12);
+      }
+
+      /* ========== SECCIÓN PERROS ========== */
+      .section-dogs {
+        padding: 40px 40px 0px 40px;
+        background: var(--fondo);
+        text-align: center;
+      }
+
+      .dogs-intro {
+        font-size: 1.3rem;
+        color: var(--vino);
+        font-weight: 700;
+        margin-bottom: 7px;
+        font-family: var(--font-heading);
+      }
+
+      .dogs-emoji {
+        display: block;
+        font-size: 2rem;
+        margin: 16px 0;
+      }
+
+      .dogs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 40px;
+        max-width: 900px;
+        margin: 0px auto;
+      }
+
+      .dog-card {
+        position: relative;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .dog-image {
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 20px;
+        /* box-shadow: 0 12px 32px rgba(109, 35, 59, 0.15); */
+        transition: transform 0.3s ease;
+      }
+
+      .dog-card:hover .dog-image {
+        transform: scale(1.04);
+      }
+
+      .dog-name {
+        font-family: var(--font-heading);
+        font-size: 1.6rem;
+        color: var(--vino);
+        margin-top: 16px;
+        font-weight: 700;
+      }
+
+      .dog-breed {
+        /* font-size: 0.95rem;
+      color: var(--palo-rosa);
+      font-weight: 600;
+      letter-spacing: 0.08em; */
+        margin-bottom: 5px;
+      }
+
+      .dog-breed-cupos {
+        /* font-size: 0.95rem;
+      color: var(--palo-rosa);
+      font-weight: 600;
+      letter-spacing: 0.08em; */
+        margin-bottom: 25px;
+      }
+
+      .dogs-story {
+        max-width: 700px;
+        margin: 60px auto 0;
+        padding-top: 40px;
+        border-top: 2px solid rgba(196, 138, 143, 0.3);
       }
 
       .dogs-story-title {
-        font-size: 1.5rem;
+        font-family: var(--font-heading);
+        font-size: 2rem;
+        color: var(--vino);
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .dates-display {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+      }
+
+      .date-item {
+        font-family: var(--font-heading);
+        font-size: 3rem;
+        color: var(--durazno);
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .countdown-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .countdown-value {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        color: var(--texto-secundario);
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .countdown-label {
+        font-size: 0.85rem;
+        color: var(--texto-secundario);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+      }
+
+      .dogs-message {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: var(--texto-secundario);
+        line-height: 1.8;
+      }
+
+      /* ========== SECCIÓN RSVP ========== */
+      .section-rsvp {
+        padding: 80px 40px;
+        background: linear-gradient(
+          180deg,
+          rgba(109, 35, 59, 0.05) 0%,
+          rgba(255, 255, 255, 0.6) 100%
+        );
+        text-align: center;
+      }
+
+      .rsvp-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .rsvp-subtitle {
+        font-size: 1rem;
+        color: var(--palo-rosa);
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-weight: 700;
+        margin-bottom: 16px;
       }
 
       .rsvp-form {
-        gap: 12px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
       }
-    }
-  </style>
-</head>
-<body>
-  <main class="page">
-    <div class="container">
-      <!-- SECCIÓN HÉROE -->
-      <section class="section-hero" id="home">
-        <div class="hero-content">
-          <p class="hero__intro">Aquí comienza un <b>para siempre </b> escrito con amor y propósito por parte de Dios</p>
-          <!-- <p class="hero__intro"></p> -->
-          <div class="hero__divider"></div>
-          <img src="daniel-judith.svg" alt="Daniel & Judith" class="hero__names-svg" />
-          <div class="hero__divider"></div>
-           <div class="verse-box">
-          <p class="verse-text">
-            "Más vale dos que uno, porque el resultado puede ser mucho mejor. Si uno cae, el otro lo levanta."
-          </p>
-          <p class="verse-text">Eclesiastés 4:9-10a</p>
-        </div>
-          <div class="dates-display">
-            <div class="countdown-item">
-              <span class="countdown-value" id="days">0</span>
-              <span class="countdown-label">Días</span>
+
+      .form-group {
+        text-align: left;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 0.95rem;
+        color: var(--vino);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .form-input,
+      .form-textarea,
+      .form-select {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid var(--borde);
+        border-radius: 12px;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        color: var(--texto-principal);
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      .form-input:focus,
+      .form-textarea:focus,
+      .form-select:focus {
+        outline: none;
+        border-color: var(--palo-rosa);
+        box-shadow: 0 0 0 3px rgba(196, 138, 143, 0.1);
+      }
+
+      .form-textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .btn-submit {
+        min-height: 56px;
+        padding: 0 40px;
+        background: var(--durazno);
+        color: var(--vino);
+        border: none;
+        border-radius: 999px;
+        font-family: var(--font-body);
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition:
+          transform 0.24s ease,
+          box-shadow 0.24s ease;
+        box-shadow: 0 8px 20px rgba(246, 202, 179, 0.2);
+        margin-top: 8px;
+      }
+
+      .btn-submit:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(246, 202, 179, 0.3);
+      }
+
+      .rsvp-note {
+        margin-top: 24px;
+        font-size: 0.95rem;
+        color: var(--texto-secundario);
+        font-style: italic;
+      }
+
+      /* ========== FOOTER ========== */
+      .section-footer {
+        padding: 40px;
+        background: var(--vino);
+        color: var(--blanco);
+        text-align: center;
+      }
+
+      .footer-text {
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .footer-names {
+        font-family: var(--font-heading);
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-top: 12px;
+      }
+
+      /* ========== COUNTER INTERACTIVO ========== */
+      .counter-section {
+        margin: 20px 0;
+        padding: 20px;
+        background: rgba(196, 138, 143, 0.1);
+        border-radius: 16px;
+      }
+
+      .counter-label {
+        font-size: 0.95rem;
+        color: var(--texto-secundario);
+        margin-bottom: 12px;
+      }
+
+      .counter-display {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        color: var(--durazno);
+        font-weight: 700;
+        margin: 8px 0;
+      }
+
+      .counter-desc {
+        font-size: 0.9rem;
+        color: var(--texto-secundario);
+      }
+
+      /* ========== RESPONSIVE ========== */
+      @media (max-width: 768px) {
+        .section-hero {
+          padding: 40px 24px;
+          min-height: auto;
+        }
+
+        .hero__names {
+          font-size: 2.5rem;
+        }
+
+        .section-verse,
+        .section-details,
+        .section-dogs,
+        .section-rsvp {
+          padding: 50px 24px;
+        }
+
+        .verse-box {
+          padding: 30px 24px;
+        }
+
+        .details-grid {
+          gap: 20px;
+          grid-template-columns: 1fr;
+        }
+
+        .detail-card {
+          padding: 30px 20px;
+        }
+
+        .dogs-grid {
+          gap: 24px;
+        }
+
+        .dog-image {
+          max-width: 100%;
+          height: 240px;
+        }
+
+        .section-title {
+          font-size: 2rem;
+          margin-bottom: 40px;
+        }
+
+        .dates-display {
+          gap: 20px;
+        }
+
+        .date-item {
+          font-size: 2.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          border-radius: 0;
+        }
+
+        .hero__names {
+          font-size: 1.8rem;
+        }
+
+        .hero__subtitle {
+          font-size: 0.95rem;
+        }
+
+        .section-verse,
+        .section-details,
+        .section-dogs,
+        .section-rsvp {
+          padding: 40px 16px;
+        }
+
+        .verse-box {
+          padding: 24px 16px;
+          border-radius: 16px;
+        }
+
+        .verse-text {
+          font-size: 1rem;
+        }
+
+        .detail-card {
+          padding: 24px 16px;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+          margin-bottom: 30px;
+        }
+
+        .dogs-story-title {
+          font-size: 1.5rem;
+        }
+
+        .rsvp-form {
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <div class="container">
+        <!-- SECCIÓN HÉROE -->
+        <section class="section-hero" id="home">
+          <div class="hero-content">
+            <p class="hero__intro">
+              Aquí comienza un <b>para siempre </b> escrito con amor y propósito
+              por parte de Dios
+            </p>
+            <!-- <p class="hero__intro"></p> -->
+            <div class="hero__divider"></div>
+            <img
+              src="daniel-judith.svg"
+              alt="Daniel & Judith"
+              class="hero__names-svg"
+            />
+            <div class="hero__divider"></div>
+            <div class="verse-box">
+              <p class="verse-text">
+                "Más vale dos que uno, porque el resultado puede ser mucho
+                mejor. Si uno cae, el otro lo levanta."
+              </p>
+              <p class="verse-text">Eclesiastés 4:9-10a</p>
             </div>
-            <div class="countdown-item">
-              <span class="countdown-value" id="hours">0</span>
-              <span class="countdown-label">Horas</span>
-            </div>
-            <div class="countdown-item">
-              <span class="countdown-value" id="minutes">0</span>
-              <span class="countdown-label">Minutos</span>
-            </div>
-            <div class="countdown-item">
-              <span class="countdown-value" id="seconds">0</span>
-              <span class="countdown-label">Segundos</span>
-            </div>
+            <div class="dates-display">
+              <div class="countdown-item">
+                <span class="countdown-value" id="days">0</span>
+                <span class="countdown-label">Días</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="hours">0</span>
+                <span class="countdown-label">Horas</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="minutes">0</span>
+                <span class="countdown-label">Minutos</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-value" id="seconds">0</span>
+                <span class="countdown-label">Segundos</span>
+              </div>
+            </div> 
           </div>
-          <!-- <p class="hero__subtitle">
-            Estás invitado a celebrar con nosotros la alegría de unir nuestras vidas y caminar juntos en esta nueva etapa.
-          </p> -->
-        </div>
-      </section>
+        </section>
 
         <!-- SECCIÓN PERROS -->
-      <section class="section-dogs" id="dogs">
-        <div class="dogs-intro"> Kiba y Natsu </div>
-        <!-- <div class="dogs-emoji">🐾</div> -->
-      <p class="hero__intro">¡Testigos de esta historia de amor!</p>
-        <div class="dogs-grid">
-          <div class="dog-card">
-            <img
-              src="kiba_natsu.svg"
-              alt="Kiba - Natsu"
-              class="dog-image"
-            />
-            <div class="dog-name"> </div>
-            <!-- <div class="dog-breed"></div> -->
-             <div class="dogs-intro"> Nosotros también dijimos sí.</div>
-            <p class="hero__intro dog-breed">Hemos aprobado tu asistencia a la boda de nuestros papás humanos.</p>
-            <p class="hero__intro dog-breed dog-breed-cupos" id="cupos"></p>
+        <section class="section-dogs" id="dogs">
+          <div class="dogs-intro">Kiba y Natsu</div>
+          <!-- <div class="dogs-emoji">🐾</div> -->
+          <p class="hero__intro">¡Testigos de esta historia de amor!</p>
+          <div class="dogs-grid">
+            <div class="dog-card">
+              <img src="kiba_natsu.svg" alt="Kiba - Natsu" class="dog-image" />
+              <div class="dog-name"></div>
+              <!-- <div class="dog-breed"></div> -->
+              <div class="dogs-intro">Nosotros también dijimos sí.</div>
+              <p class="hero__intro dog-breed">
+                Hemos aprobado tu asistencia a la boda de nuestros papás
+                humanos.
+              </p>
+              <p class="hero__intro dog-breed dog-breed-cupos" id="cupos"></p>
 
-            <button class="hero__cta" onclick="window.open('https://wa.me/573004077709', '_blank')">Confirma tu asistencia</button>
-
-          </div>
-        </div>
-      </section>
-
-     
-
-      <!-- SECCIÓN DETALLES -->
-      <section class="section-details" id="details">
-        <h2 class="section-title">Detalles del Evento</h2>
-        <div class="details-grid">
-          <div class="detail-card">
-            <div class="detail-icon"><img src="fecha.svg" alt="Fecha" /></div>
-            <div class="detail-label">Fecha & Hora</div>
-            <div class="detail-value">Sábado 4 de Julio</div>
-            <div class="detail-desc">6:00 PM - Ceremonia Cristiana</div>
-            <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda%20Daniel%20%26%20Judith&dates=20260704T180000/20260704T230000&details=Ceremonia%20Cristiana&location=Sal%C3%B3n%20de%20eventos%20La%20Marsellesa%2C%20Cra.%2052%20%2374-90%2C%20Barranquilla&ctz=America/Bogota" target="_blank" class="detail-link">Añadir al Calendario</a>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-icon"><img src="lugar.svg" alt="Ubicación" /></div>
-            <div class="detail-label">Lugar</div>
-            <div class="detail-value">Salón de eventos La Marsellesa</div>
-            <div class="detail-desc">Cra. 52 #74-90 - Barranquilla</div>
-            <a href="https://maps.google.com/?q=La+Marsellesa+Cra+52+74-90" target="_blank" class="detail-link">Ver Mapa</a>
-          </div>
-
-          <div class="detail-card">
-            <div class="detail-icon"><img src="ropa.svg" alt="Código de Vestimenta" /></div>
-            <div class="detail-label">Código de Vestimenta</div>
-            <div class="detail-value">Formal</div>
-            <div class="detail-desc">
-              <strong>Hombres:</strong> Traje y Corbata<br/>
-              <strong>Mujeres:</strong> Vestido Largo Unicolor<br/>
-              <strong>Colores Reservados:</strong> Blanco, Beige, Rosado, Rojo, Vino tinto
+              <button
+                class="hero__cta"
+                onclick="window.open('https://wa.me/573004077709', '_blank')"
+              >
+                Confirma tu asistencia
+              </button>
             </div>
           </div>
+        </section>
 
-          <div class="detail-card">
-            <div class="detail-icon"><img src="regalo.svg" alt="Lluvia de Sobres" /></div>
-            <div class="detail-label">Lluvia de Sobres</div>
-            <div class="detail-value">Tu Regalo</div>
-            <div class="detail-desc">
-              Para tu comodidad, en la recepción contaremos con un buzón para lluvia de sobres y un código QR para transferencias.
+        <!-- SECCIÓN DETALLES -->
+        <section class="section-details" id="details">
+          <h2 class="section-title">Detalles del Evento</h2>
+          <div class="details-grid">
+            <div class="detail-card">
+              <div class="detail-icon"><img src="fecha.svg" alt="Fecha" /></div>
+              <div class="detail-label">Fecha & Hora</div>
+              <div class="detail-value">Sábado 4 de Julio</div>
+              <div class="detail-desc">6:00 PM - Ceremonia Cristiana</div>
+              <a
+                href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda%20Daniel%20%26%20Judith&dates=20260704T180000/20260704T230000&details=Ceremonia%20Cristiana&location=Sal%C3%B3n%20de%20eventos%20La%20Marsellesa%2C%20Cra.%2052%20%2374-90%2C%20Barranquilla&ctz=America/Bogota"
+                target="_blank"
+                class="detail-link"
+                >Añadir al Calendario</a
+              >
+            </div>
+
+            <div class="detail-card">
+              <div class="detail-icon">
+                <img src="lugar.svg" alt="Ubicación" />
+              </div>
+              <div class="detail-label">Lugar</div>
+              <div class="detail-value">Salón de eventos La Marsellesa</div>
+              <div class="detail-desc">Cra. 52 #74-90 - Barranquilla</div>
+              <a
+                href="https://maps.google.com/?q=La+Marsellesa+Cra+52+74-90"
+                target="_blank"
+                class="detail-link"
+                >Ver Mapa</a
+              >
+            </div>
+
+            <div class="detail-card">
+              <div class="detail-icon">
+                <img src="ropa.svg" alt="Código de Vestimenta" />
+              </div>
+              <div class="detail-label">Código de Vestimenta</div>
+              <div class="detail-value">Formal</div>
+              <div class="detail-desc">
+                <strong>Hombres:</strong> Traje y Corbata<br />
+                <strong>Mujeres:</strong> Vestido Largo Unicolor<br />
+                <strong>Colores Reservados:</strong> Blanco, Beige, Rosado,
+                Rojo, Vino tinto
+              </div>
+            </div>
+
+            <div class="detail-card">
+              <div class="detail-icon">
+                <img src="regalo.svg" alt="Lluvia de Sobres" />
+              </div>
+              <div class="detail-label">Lluvia de Sobres</div>
+              <div class="detail-value">Tu Regalo</div>
+              <div class="detail-desc">
+                Para tu comodidad, en la recepción contaremos con un buzón para
+                lluvia de sobres y un código QR para transferencias.
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
+    </main>
 
-     <!-- SECCIÓN VERSÍCULO -->
-      <!-- <section class="section-verse" id="verse">
-        <div class="verse-box">
-          <p class="verse-text">
-            "Más vale dos que uno, porque el resultado puede ser mucho mejor. Si uno cae, el otro lo levanta."
-          </p>
-          <p class="verse-reference">Eclesiastés 4:9-10a</p>
-        </div>
-      </section> -->
+    <script>
+      // ========== UTILIDADES ==========
+      function scrollToRsvp() {
+        const rsvpSection = document.getElementById("rsvp");
+        rsvpSection.scrollIntoView({ behavior: "smooth" });
+      }
 
-     
+      // ========== CONTADOR DE DÍAS ==========
+      function initializeCounter() {
+        const weddingDate = new Date(2026, 6, 4, 18, 0, 0); // 4 de Julio 2026, 6:00 PM
 
-      <!-- FOOTER -->
-      <!-- <section class="section-footer">
-        <p class="footer-text">
-          Hemos reservado un lugar especial para ti.<br/>
-          Sin duda alguna, nuestro mejor regalo será tu presencia en este día tan Especial. <br/>
-        </p>
-        <div class="footer-names">Daniel & Judith 💕</div>
-      </section> -->
-    </div>
-  </main>
+        function updateCountdown() {
+          // Obtener hora actual en Colombia (UTC-5)
+          const utcNow = new Date();
+          const colombiaTime = new Date(
+            utcNow.getTime() +
+              utcNow.getTimezoneOffset() * 60 * 1000 -
+              5 * 60 * 60 * 1000,
+          );
 
-  <script>
-    // ========== UTILIDADES ==========
-    function scrollToRsvp() {
-      const rsvpSection = document.getElementById("rsvp");
-      rsvpSection.scrollIntoView({ behavior: "smooth" });
-    }
+          const difference = weddingDate - colombiaTime;
 
-    // ========== CONTADOR DE DÍAS ==========
-    function initializeCounter() {
-      const weddingDate = new Date(2026, 6, 4, 18, 0, 0); // 4 de Julio 2026, 6:00 PM
+          if (difference > 0) {
+            // Calcular días
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-      function updateCountdown() {
-        // Obtener hora actual en Colombia (UTC-5)
-        const utcNow = new Date();
-        const colombiaTime = new Date(utcNow.getTime() + utcNow.getTimezoneOffset() * 60 * 1000 - 5 * 60 * 60 * 1000);
-        
-        const difference = weddingDate - colombiaTime;
+            // Calcular horas restantes
+            const hours = Math.floor(
+              (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+            );
 
-        if (difference > 0) {
-          // Calcular días
-          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          
-          // Calcular horas restantes
-          const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          
-          // Calcular minutos restantes
-          const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-          
-          // Calcular segundos restantes
-          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            // Calcular minutos restantes
+            const minutes = Math.floor(
+              (difference % (1000 * 60 * 60)) / (1000 * 60),
+            );
 
-          document.getElementById("days").textContent = days >= 0 ? days : 0;
-          document.getElementById("hours").textContent = hours >= 0 ? hours : 0;
-          document.getElementById("minutes").textContent = minutes >= 0 ? minutes : 0;
-          document.getElementById("seconds").textContent = seconds >= 0 ? seconds : 0;
-        } else {
-          document.getElementById("days").textContent = "0";
-          document.getElementById("hours").textContent = "0";
-          document.getElementById("minutes").textContent = "0";
-          document.getElementById("seconds").textContent = "0";
+            // Calcular segundos restantes
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days >= 0 ? days : 0;
+            document.getElementById("hours").textContent =
+              hours >= 0 ? hours : 0;
+            document.getElementById("minutes").textContent =
+              minutes >= 0 ? minutes : 0;
+            document.getElementById("seconds").textContent =
+              seconds >= 0 ? seconds : 0;
+          } else {
+            document.getElementById("days").textContent = "0";
+            document.getElementById("hours").textContent = "0";
+            document.getElementById("minutes").textContent = "0";
+            document.getElementById("seconds").textContent = "0";
+          }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000); // Actualizar cada segundo
+      }
+
+      // ========== PARÁMETRO SHOW ==========
+      function handleShowParameter() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("show")) {
+          // Ocultar todas las secciones
+          document
+            .querySelectorAll(
+              ".section-hero, .section-dogs, .section-verse, .section-rsvp, .section-footer",
+            )
+            .forEach((section) => {
+              section.style.display = "none";
+            });
+          // Asegurar que la sección de detalles sea visible
+          const detailsSection = document.getElementById("details");
+          if (detailsSection) {
+            detailsSection.style.display = "block";
+          }
         }
       }
 
-      updateCountdown();
-      setInterval(updateCountdown, 1000); // Actualizar cada segundo
-    }
-
-    // ========== MANEJO DEL FORMULARIO RSVP ==========
-    // Desactivado: Se activará cuando exista el formulario RSVP en el HTML
-    /*
-    document.getElementById("rsvpForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const attendance = document.getElementById("attendance").value;
-      const guests = document.getElementById("guests").value;
-      const dietary = document.getElementById("dietary").value;
-      const message = document.getElementById("message").value;
-
-      // Simulación de envío
-      const responseMessage = `
-Gracias, ${name}!
-
-Tu confirmación ha sido registrada:
-- Asistencia: ${attendance === "yes" ? "Confirmada ✅" : attendance === "no" ? "No puede asistir ❌" : "No determinada ❓"}
-- Acompañantes: ${guests}
-- Restricciones: ${dietary || "Ninguna"}
-${message ? `- Mensaje: "${message}"` : ""}
-
-¡Te esperamos en la boda!
-      `.trim();
-
-      alert(responseMessage);
-
-      // Limpiar formulario
-      this.reset();
-    });
-    */
-
-    // ========== PARÁMETRO SHOW ==========
-    function handleShowParameter() {
-      const params = new URLSearchParams(window.location.search);
-      if (params.has("show")) {
-        // Ocultar todas las secciones
-        document.querySelectorAll(".section-hero, .section-dogs, .section-verse, .section-rsvp, .section-footer").forEach(section => {
-          section.style.display = "none";
-        });
-        // Asegurar que la sección de detalles sea visible
-        const detailsSection = document.getElementById("details");
-        if (detailsSection) {
-          detailsSection.style.display = "block";
+      // ========== PARÁMETRO CUPOS ==========
+      function handleCuposParameter() {
+        const params = new URLSearchParams(window.location.search);
+        if (params.has("cupos")) {
+          const cuposValue = params.get("cupos");
+          const cuposElement = document.getElementById("cupos");
+          if (cuposElement) {
+            cuposElement.textContent = `Cupos (${cuposValue})`;
+          }
         }
       }
-    }
 
-    // ========== PARÁMETRO CUPOS ==========
-    function handleCuposParameter() {
-      const params = new URLSearchParams(window.location.search);
-      if (params.has("cupos")) {
-        const cuposValue = params.get("cupos");
-        const cuposElement = document.getElementById("cupos");
-        if (cuposElement) {
-          cuposElement.textContent = `Cupos (${cuposValue})`;
-        }
-      }
-    }
-
-    // ========== INICIALIZACIÓN ==========
-    document.addEventListener("DOMContentLoaded", function () {
-      handleShowParameter();
-      handleCuposParameter();
-      initializeCounter();
-    });
-  </script>
-</body>
+      // ========== INICIALIZACIÓN ==========
+      document.addEventListener("DOMContentLoaded", function () {
+        handleShowParameter();
+        handleCuposParameter();
+        initializeCounter();
+      });
+    </script>
+  </body>
 </html>
