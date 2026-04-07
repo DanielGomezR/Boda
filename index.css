@@ -264,6 +264,13 @@ img {
   line-height: 1.4;
 }
 
+.detail-desc-note {
+  font-size: 0.8rem;
+  color: var(--texto-secundario);
+  line-height: 1.1;
+  margin-top: 12px;
+}
+
 .detail-link {
   display: inline-block;
   margin-top: 14px;
