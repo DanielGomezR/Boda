@@ -12,8 +12,8 @@ function initializeIntroOverlay() {
 
   // Después de 11 segundos (9s + 1s de transición), remover el overlay
   setTimeout(() => {
-    introOverlay.remove();
     document.body.classList.remove("intro-active");
+    introOverlay.remove();
   }, 10000);
 }
 

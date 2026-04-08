@@ -53,7 +53,7 @@ img {
   justify-content: center;
   z-index: 9999;
   opacity: 1;
-  transition: opacity 1s ease-out forwards;
+  transition: opacity 1s ease-in;
 }
 
 .intro-overlay.fade-out {
