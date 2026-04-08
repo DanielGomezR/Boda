@@ -1,3 +1,22 @@
+// ========== INTRO OVERLAY ==========
+function initializeIntroOverlay() {
+  const introOverlay = document.getElementById("introOverlay");
+  
+  // Agregar clase para desactivar scroll
+  document.body.classList.add("intro-active");
+
+  // Después de 10 segundos, comenzar el fade out
+  setTimeout(() => {
+    introOverlay.classList.add("fade-out");
+  }, 10000);
+
+  // Después de 11 segundos (10s + 1s de transición), remover el overlay
+  setTimeout(() => {
+    introOverlay.remove();
+    document.body.classList.remove("intro-active");
+  }, 11000);
+}
+
 // ========== UTILIDADES ==========
 function scrollToRsvp() {
   const rsvpSection = document.getElementById("rsvp");
@@ -88,6 +107,7 @@ function handleCuposParameter() {
 
 // ========== INICIALIZACIÓN ==========
 document.addEventListener("DOMContentLoaded", function () {
+  initializeIntroOverlay();
   handleShowParameter();
   handleCuposParameter();
   initializeCounter();
