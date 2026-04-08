@@ -5,16 +5,16 @@ function initializeIntroOverlay() {
   // Agregar clase para desactivar scroll
   document.body.classList.add("intro-active");
 
-  // Después de 10 segundos, comenzar el fade out
+  // Después de 9 segundos, comenzar el fade out
   setTimeout(() => {
     introOverlay.classList.add("fade-out");
-  }, 10000);
+  }, 9000);
 
-  // Después de 11 segundos (10s + 1s de transición), remover el overlay
+  // Después de 11 segundos (9s + 1s de transición), remover el overlay
   setTimeout(() => {
     introOverlay.remove();
     document.body.classList.remove("intro-active");
-  }, 11000);
+  }, 10000);
 }
 
 // ========== UTILIDADES ==========
