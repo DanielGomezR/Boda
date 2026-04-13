@@ -1,6 +1,16 @@
 // ========== INTRO OVERLAY ==========
 function initializeIntroOverlay() {
   const introOverlay = document.getElementById("introOverlay");
+  const params = new URLSearchParams(window.location.search);
+
+  // Si existe el parámetro 'show' o 'animation=false', no mostrar la animación
+  if (params.has("show") || params.get("animation") === "false") {
+    introOverlay.remove();
+    return;
+  }
+  
+  // Mostrar el overlay
+  introOverlay.classList.add("show");
   
   // Agregar clase para desactivar scroll
   document.body.classList.add("intro-active");
@@ -89,6 +99,27 @@ function handleShowParameter() {
     const detailsSection = document.getElementById("details");
     if (detailsSection) {
       detailsSection.style.display = "block";
+      
+      // Crear y añadir botón debajo del título
+      const sectionTitle = detailsSection.querySelector(".section-title");
+      if (sectionTitle) {
+        // Crear contenedor centrado para el botón
+        const buttonContainer = document.createElement("div");
+        buttonContainer.className = "button-container";
+        
+        const button = document.createElement("button");
+        button.className = "hero__cta";
+        button.textContent = "Confirma tu asistencia";
+        button.onclick = function() {
+          window.open('https://wa.me/573004077709', '_blank');
+        };
+        
+        // Añadir botón al contenedor
+        buttonContainer.appendChild(button);
+        
+        // Insertar el contenedor después del título
+        sectionTitle.insertAdjacentElement("afterend", buttonContainer);
+      }
     }
   }
 }
