@@ -590,7 +590,7 @@ img {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: var(--fondo);
+  background: transparent;
 }
 
 .footer-image {
