@@ -18,13 +18,13 @@ function initializeIntroOverlay() {
   // Después de 9 segundos, comenzar el fade out
   setTimeout(() => {
     introOverlay.classList.add("fade-out");
-  }, 9000);
+  }, 7000);
 
   // Después de 11 segundos (9s + 1s de transición), remover el overlay
   setTimeout(() => {
     document.body.classList.remove("intro-active");
     introOverlay.remove();
-  }, 10000);
+  }, 8000);
 }
 
 // ========== UTILIDADES ==========
