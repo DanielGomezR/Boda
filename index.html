@@ -127,14 +127,6 @@
                 <img src="ropa.svg" alt="Código de Vestimenta" />
               </div>
               <div class="detail-label">Código de Vestimenta</div>
-              <!-- <div class="detail-value">Formal</div> -->
-              <!-- <div class="detail-desc">
-                <strong>Hombres:</strong> Traje y Corbata<br />
-                <strong>Mujeres:</strong> Vestido Largo Unicolor<br />
-                <strong>Colores Reservados:</strong> Blanco, Beige, Rosado,
-                Rojo, Vino tinto
-              </div> -->
-
                <div class="detail-value">Formal</div>
               <div class="detail-desc">
                 Para <strong>ellos</strong> traje y corbata, para <strong>ellas</strong> vestido largo unicolor .
@@ -162,11 +154,32 @@
                 Para tu comodidad, en la recepción contaremos con un buzón para
                 lluvia de sobres y un código QR para transferencias.
               </div>
+              <a onclick="openQrModal()" target="_blank" class="detail-link" 
+                style=" cursor: pointer;">Envío Regalo Virtual
+              </a>
             </div>
           </div>
         </section>
       </div>
     </main>
+
+    <!-- MODAL QR -->
+    <div class="qr-modal" id="qrModal">
+      <div class="qr-modal-content">
+        <button class="qr-modal-close" onclick="closeQrModal()">&times;</button>
+        <h2 class="qr-modal-title">Formas de Pago</h2>
+        <div class="qr-container">
+          <div class="qr-item">
+            <h3 class="qr-title">Bancolombia</h3>
+            <img src="qr_bancolombia.png" alt="QR Bancolombia" class="qr-image" />
+          </div>
+          <div class="qr-item">
+            <h3 class="qr-title">PayPal</h3>
+            <img src="qr_paypal.png" alt="QR PayPal" class="qr-image" />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="main-footer">

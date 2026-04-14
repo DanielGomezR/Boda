@@ -136,6 +136,36 @@ function handleCuposParameter() {
   }
 }
 
+// ========== MODAL QR ==========
+function openQrModal() {
+  const qrModal = document.getElementById("qrModal");
+  qrModal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeQrModal() {
+  const qrModal = document.getElementById("qrModal");
+  qrModal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
+// Cerrar modal al clickear fuera del contenido
+document.addEventListener("DOMContentLoaded", function () {
+  const qrModal = document.getElementById("qrModal");
+  qrModal.addEventListener("click", function (event) {
+    if (event.target === qrModal) {
+      closeQrModal();
+    }
+  });
+
+  // Cerrar modal con tecla Escape
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeQrModal();
+    }
+  });
+});
+
 // ========== INICIALIZACIÓN ==========
 document.addEventListener("DOMContentLoaded", function () {
   initializeIntroOverlay();
