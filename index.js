@@ -111,7 +111,7 @@ function handleShowParameter() {
         button.className = "hero__cta";
         button.textContent = "Confirma tu asistencia";
         button.onclick = function() {
-          window.open('https://wa.me/573004077709', '_blank');
+          window.open('https://api.whatsapp.com/send/?phone=573103463384&text=Hola+%E2%99%A1+Mi+nombre+es+_nombre_+y+quiero+confirmar+mi+asistencia+a+la+boda+de+Daniel+y+Judith+este+4+de+Julio&type=phone_number&app_absent=0', '_blank');
         };
         
         // Añadir botón al contenedor
